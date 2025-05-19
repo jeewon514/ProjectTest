@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>투두리스트</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Pretendard', sans-serif;
+      background-color: #f7f9fb;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* 사이드바 */
+    .sidebar {
+      width: 220px;
+      background-color: #fff;
+      padding: 30px 20px;
+      box-shadow: 2px 0 4px rgba(0, 0, 0, 0.05);
+    }
+    .logo {
+      font-size: 24px;
+      color: #3cb371;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+    .category-title {
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: #888;
+    }
+    .category {
+      list-style: none;
+      padding: 0;
+    }
+    .category li {
+      padding: 8px 12px;
+      margin: 6px 0;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .category li.active {
+      background-color: #e6f4ea;
+      color: #3cb371;
+      font-weight: bold;
+    }
+    .category li:hover {
+      background-color: #f0f0f0;
+    }
+
+    /* 메인 컨텐츠 */
+    .main {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      background-color: #f7f9fb;
+    }
+
+    .header {
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .header h2 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .cards {
+      padding: 30px;
+      display: flex;
+      gap: 20px;
+    }
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      width: 250px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+    .card h3 {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+      margin: 0 0 8px 0;
+    }
+    .card small {
+      color: #888;
+    }
+    .task-list {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+    }
+    .task-list li {
+      margin: 8px 0;
+    }
+    .task-list input[type="checkbox"] {
+      margin-right: 8px;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      font-size: 14px;
+      color: #444;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      background: #fff;
+      padding: 8px 12px;
+      border-radius: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <div class="logo">logo</div>
+    <div class="category-title">카테고리</div>
+    <ul class="category">
+      <li class="active">❤️ 마음</li>
+      <li>⭐ 공부</li>
+      <li>🏃️‍♀️ 운동</li>
+      <li>📄 독서</li>
+      <li>+ 카테고리 추가</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <div class="header">
+      <h2>투두리스트</h2>
+      <div class="menu">&#x2630;</div>
+    </div>
+
+    <div class="cards">
+      <!-- 카드 1: 마음 -->
+      <div class="card">
+        <h3>❤️ 마음 <small>3개 항목</small></h3>
+        <ul class="task-list">
+          <li><input type="checkbox" checked> 명상 10분 하기</li>
+          <li><input type="checkbox"> 감사일기 작성하기</li>
+          <li><input type="checkbox"> 긍정적인 생각 유지하기</li>
+        </ul>
+      </div>
+
+      <!-- 카드 2: 공부 -->
+      <div class="card">
+        <h3>⭐ 공부 <small>4개 항목</small></h3>
+        <ul class="task-list">
+          <li><input type="checkbox" checked> 프로그래밍 강의 듣기</li>
+          <li><input type="checkbox"> 영어 단어 30개 외우기</li>
+          <li><input type="checkbox"> 알고리즘 문제 풀기</li>
+          <li><input type="checkbox"> 프로젝트 계획 세우기</li>
+        </ul>
+      </div>
+
+      <!-- 카드 3: 운동 -->
+      <div class="card">
+        <h3>🏃️‍♀️ 운동 <small>3개 항목</small></h3>
+        <ul class="task-list">
+          <li><input type="checkbox" checked> 아침 조깅 30분</li>
+          <li><input type="checkbox"> 스트레칭 10분</li>
+          <li><input type="checkbox"> 근력 운동 20분</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    ↺ 다시 시작 <span style="font-size: 12px;">R</span>
+  </div>
+</body>
+</html>

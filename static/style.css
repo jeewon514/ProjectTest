@@ -1,0 +1,21 @@
+/* 전체 배경 및 중앙 정렬 */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;     /* 수평 중앙 정렬 */
+  align-items: center;         /* 수직 중앙 정렬 */
+  background-color: #f5f7fa;
+  font-family: sans-serif;
+}
+
+/* 박스 스타일 */
+.container {
+  width: 400px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>To-do List</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="cards">
+  {% for category, data in todos.items() %}
+  <div class="card">
+    <h3>{{ data.icon }} {{ category }} <small>{{ data.tasks | length }}개 항목</small></h3>
+    <ul class="task-list">
+      {% for task, done in zip(data.tasks, data.checked) %}
+      <li>
+        <input type="checkbox" {% if done %}checked{% endif %}> {{ task }}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+</div>
+
+</body>
+</html>
+
